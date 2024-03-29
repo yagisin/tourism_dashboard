@@ -1,0 +1,6 @@
+pandas
+numpy
+plotly
+streamlit
+gcsfs
+st_files_connection
