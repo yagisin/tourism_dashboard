@@ -29,6 +29,7 @@ df_pref = preprocessing.run_prefecture(df_pref)
 df_city = preprocessing.run_city(df_city)
 
 
+
 # Row1 Plot 群馬県観光来訪者数
 chart = alt.Chart(df_pref).mark_line(size=2, point=True).encode(
 

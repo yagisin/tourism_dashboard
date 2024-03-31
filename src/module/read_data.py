@@ -1,5 +1,6 @@
 import pandas as pd
 
+
 def run_prefecture(df):
     """
     Preprocess prefecture data
@@ -41,3 +42,21 @@ def run_city(df):
     df['year_month'] = pd.to_datetime(df['year_month'])
 
     return df
+
+
+def main():
+
+    url_pref = 'https://raw.githubusercontent.com/yagisin/tourism_dashboard/main/data/prefecture.csv'
+    url_city = 'https://raw.githubusercontent.com/yagisin/tourism_dashboard/main/data/city.csv'
+
+    df_pref = pd.read_csv(url_pref)
+    df_city = pd.read_csv(url_city)
+
+    df_pref = run_prefecture(df_pref)
+    df_city = run_city(df_city)
+
+    return df_pref, df_city
+
+
+if __name__ == '__main__':
+    main()
